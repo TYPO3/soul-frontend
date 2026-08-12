@@ -1,0 +1,27 @@
+:root {
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-19: 76px;
+
+  --gutter-page: 48px;
+  /* The measure a page runs at: the bar, the body, the column and the foot are
+     all held to it and centred on it, so a page is one width. Nothing that is
+     *read* runs this wide — prose, a lead and display type are each held to
+     their own measure. This is what is scanned: tables, grids of cards, a
+     band's two columns, which is the part short of room. */
+  --width-page: 1200px;
+  --width-sidebar: 210px;
+  --height-header: 56px;
+
+  /* A modal is centred and stops here. The specimen says so in words; this
+     is where the number lives. */
+  --measure-modal: 560px;
+}

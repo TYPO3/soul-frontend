@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="art" viewBox="0 0 16 16" role="img" aria-label="Soul Design System">
+  <title>Soul Design System</title>
+  <!-- Every colour sits on its own shape, as a var() with a hex fallback: a
+       page that declares the tokens gets its own ink, and this file still
+       renders on its own. Nothing colours it from a <style> or from the root,
+       and no comment in here may carry a double dash, which is what makes an
+       SVG malformed and a reference to it draw nothing. See
+       docs/guidelines/artwork.rst. -->
+  <!-- S - drawn at 16, where one unit is one pixel, and for the favicon.
+       Stroke 1, rounding 0.5, gap 1. The box is 16 x 12, centred; outer
+       corners at radius 2.
+
+       The halves are the point rather than an exception: a one-pixel stroke
+       is centred on a half pixel, so its ink lands on 0 and 1 and not across
+       both. Every straight edge in here is still a whole number.
+
+       One pixel of stroke, not two. Sixteen pixels hold three parts, two gaps
+       and two crop marks across, and at two pixels a part the gaps have
+       nowhere left to be. So the stroke goes to the thinnest thing a screen
+       can draw whole and the parts carry the recognising instead. They keep
+       the 2 / 4 / 2 the M is drawn with, which in a box two thirds the size
+       is a heavier mark rather than the same one made smaller.
+
+       At this size the crop marks carry almost nothing. They are two hooks,
+       and both stop at the middle rather than reaching along the edge, which
+       is room the parts need more than the corners do. -->
+  <path stroke="var(--text-primary, #8A8378)" d="M7 13.5H2A1.5 1.5 0 0 1 0.5 12V8" fill="none" stroke-width="1" stroke-linejoin="round" stroke-linecap="round"></path>
+  <rect fill="var(--text-primary, #8A8378)" x="3" y="5" width="2" height="6" rx="0.5"></rect>
+  <rect fill="var(--text-primary, #8A8378)" x="6" y="5" width="4" height="6" rx="0.5"></rect>
+  <rect fill="var(--text-primary, #8A8378)" x="11" y="5" width="2" height="6" rx="0.5"></rect>
+  <path stroke="var(--accent, #FF8700)" d="M9 2.5H14A1.5 1.5 0 0 1 15.5 4V8" fill="none" stroke-width="1" stroke-linejoin="round" stroke-linecap="round"></path>
+</svg>

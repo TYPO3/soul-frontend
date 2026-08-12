@@ -1,0 +1,81 @@
+/* Control scale.
+
+   The type tokens in typography.css set the *editorial* scale. Controls run
+   tighter than prose and always have: a 14px button next to 17px body text is
+   deliberate, not an oversight. These name the values the components were tuned
+   to, so the second scale is declared rather than accidental.
+
+   Converging the two is a real option, but it is a design decision that moves
+   every surface — not a cleanup. */
+
+:root {
+  /* Buttons, fields, selects — anything you click or type in. */
+  --control-font-size: 14px;
+  --control-font-size-sm: 13px;
+
+  /* One height for all of them, declared rather than fallen out of padding: a
+     12px segment, a 13px label and a 14px input make three different boxes out
+     of the same padding, and a header shows all three on one line. A floor and
+     not a ceiling — every control's padding comes in under it, and one whose
+     content outgrows it, a field with two lines, still grows. */
+  --control-height: 36px;
+  --control-height-sm: 28px;
+
+  /* Controls do not carry prose leading. `--leading-body` is 1.65, which is
+     right for a paragraph and wrong here: it puts a 14px label in a 23px
+     line box, over half a control's height before any padding is added, and
+     it makes every control's height a function of the body scale. */
+  --control-leading: 1.2;
+
+  --control-pad-y: 8px;
+  --control-pad-x: 15px;
+  --control-pad-y-sm: 5px;
+  --control-pad-x-sm: 11px;
+  --control-gap: 8px;
+  /* The icon square itself. 16 is the system's floor and the size every
+     control assumes; sizes go 16, 20, 24, never 18 or 22. */
+  --control-icon-size: 16px;
+
+  /* Badges — mono, because a badge names a machine thing. */
+  --badge-font-size: 12px;
+
+  /* Tables. Head is the same at every density; only the rows breathe. */
+  --table-head-size: 10px;
+  --table-head-tracking: 0.11em;
+  --row-pad-compact: 6px;
+  --row-font-compact: 13px;
+  --row-pad-medium: 9px;
+  --row-font-medium: 14px;
+  --row-pad-airy: 14px;
+  --row-font-airy: 15px;
+
+  /* Mono cells run a step below the row's sans, so a tool name and the
+     prose beside it read at the same optical size. */
+  --row-name-compact: 12px;
+  --row-meta-compact: 11px;
+  --row-name-medium: 13px;
+  --row-meta-medium: 12px;
+  --row-name-airy: 13px;
+  --row-meta-airy: 12px;
+
+  /* Code and diff. Code is control-scale, not body-scale — --font-size-code
+     in typography.css is that size, so it is used directly here. */
+  --diff-font-size: 13px;
+  --diff-leading: 1.75;
+  --diff-tint: 14%;
+
+  /* Navigation. */
+  --nav-font-size: 13px;
+  --tab-font-size: 12px;
+
+  /* Status blocks — an answer with its source and its bounds. */
+  --note-title-size: 14px;
+  --note-body-size: 12px;
+  --note-body-leading: 1.45;
+  /* Seventy-four characters of the register above, stated as the width it comes
+     to rather than as `64ch`: `ch` is the width of the "0" in whatever element
+     the token lands on, so one number would mean several widths. This is the
+     dense register's — a note beside a result, a hint under a field. A document
+     rebinds it in `document.css`, where a note is a paragraph. */
+  --note-measure: 384px;
+}
